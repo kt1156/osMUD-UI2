@@ -7,7 +7,6 @@ export type MudFile = {
   cacheValidity?: number;
   systemInfo?: string;
   mfgName?: string;
-  modelName: string;
   firmwareRev?: string;
   softwareRev?: string;
   documentation?: string;
@@ -19,5 +18,4 @@ export const DefaultMudInfo: MudFile = {
   mudUrl: "",
   lastUpdate: "Unknown Mud",
   isSupported: true,
-  modelName: "IoT Device",
 };

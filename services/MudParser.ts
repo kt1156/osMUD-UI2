@@ -34,9 +34,6 @@ class MudParser {
         case "mfg-name":
           info.mfgName = val;
           break;
-        case "model-name":
-          info.modelName = val;
-          break;
         case "firmware-rev":
           info.firmwareRev = val;
           break;

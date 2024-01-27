@@ -1,6 +1,6 @@
 "use client";
 
-import LastUpdated from "@/components/LastUpdated";
+import MudInfo from "@/components/MudInfo";
 import Navbar from "@/components/Navbar/Navbar";
 import { MudContext } from "@/contexts/MudContext";
 import MudParser from "@/services/MudParser";
@@ -46,7 +46,7 @@ export default function Home() {
       <div className="flex flex-col gap-y-4">
         <Navbar />
         <section className="px-6 flex flex-col gap-y-2">
-          <LastUpdated />
+          <MudInfo />
           <pre>{JSON.stringify(mud, undefined, 2)}</pre>
           <div className="border-b border-black" />
           <pre>{JSON.stringify(MudStore.LoadJson(), undefined, 2)}</pre>
