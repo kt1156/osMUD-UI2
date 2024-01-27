@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="corporate">
       <body className={inter.className}>
-        <main className="bg-base-100 flex min-h-screen p-6 flex-col">
+        <main className="bg-base-100 flex min-h-screen flex-col">
           {children}
         </main>
       </body>
