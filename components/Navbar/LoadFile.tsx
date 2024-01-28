@@ -65,7 +65,7 @@ export default function LoadFile(props: LoadFileProps) {
               </p>
             )}
             <button className="btn btn-accent mt-2" onClick={onLoadFile}>
-              Save
+              Load
             </button>
           </div>
         </div>

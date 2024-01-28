@@ -3,6 +3,21 @@
 import { MudFile, DefaultMudInfo } from "@/types/Mud";
 
 class MudParser {
+  private extractDevicePolicyNames(obj: any, key: string): string[] {
+    let keys = Object.keys(obj);
+    if (keys.indexOf(key) == -1) throw new Error("Policy list does not exist");
+
+    // Find the accessList of names by looking in the first sub object
+    // and from there looking at the access-list key
+    let acls = obj[key];
+    let acls_keys = Object.keys(acls);
+    let accessList: Array<{ name: string }> = acls[acls_keys[0]]["access-list"];
+
+    return accessList.map((a) => {
+      return a.name;
+    });
+  }
+
   private extractMudInfo(obj: any): MudFile {
     let info: MudFile = { ...DefaultMudInfo };
 
@@ -50,6 +65,19 @@ class MudParser {
           break;
       }
     });
+
+    try {
+      info.fromDevicePolicy = this.extractDevicePolicyNames(
+        obj,
+        "from-device-policy"
+      );
+      info.toDevicePolicy = this.extractDevicePolicyNames(
+        obj,
+        "to-device-policy"
+      );
+    } catch (err: unknown) {
+      console.error("Error fetching policy names", err);
+    }
 
     return info;
   }

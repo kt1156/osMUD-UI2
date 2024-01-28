@@ -11,6 +11,8 @@ export type MudFile = {
   softwareRev?: string;
   documentation?: string;
   extensions?: string[];
+  fromDevicePolicy: string[];
+  toDevicePolicy: string[];
 };
 
 export const DefaultMudInfo: MudFile = {
@@ -18,4 +20,6 @@ export const DefaultMudInfo: MudFile = {
   mudUrl: "",
   lastUpdate: "Unknown Mud",
   isSupported: true,
+  fromDevicePolicy: [],
+  toDevicePolicy: [],
 };
