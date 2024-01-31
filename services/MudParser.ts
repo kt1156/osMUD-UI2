@@ -1,6 +1,7 @@
 "use client";
 
 import { MudFile, DefaultMudInfo } from "@/types/Mud";
+import AclParser from "./AclParser";
 
 class MudParser {
   private extractDevicePolicyNames(obj: any, key: string): string[] {
@@ -83,7 +84,18 @@ class MudParser {
   }
 
   parse(mud: any): MudFile {
+    const mudKeys = Object.keys(mud);
     const mudInfo = this.extractMudInfo(mud["ietf-mud:mud"]);
+
+    const aclsKeys = [
+      "ietf-access-control-list:acls",
+      "ietf-access-control-list:access-lists",
+    ];
+    mudKeys.forEach((k) => {
+      if (aclsKeys.indexOf(k) == -1) return;
+      mudInfo.acls = AclParser.parseAll(mud[k]);
+    });
+
     console.log("mud info\n", mudInfo);
     return mudInfo;
   }

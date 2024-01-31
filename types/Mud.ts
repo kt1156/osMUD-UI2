@@ -1,3 +1,5 @@
+import { ACL } from "./Acl";
+
 export type MudFile = {
   mudVersion: number;
   mudUrl: string;
@@ -13,6 +15,7 @@ export type MudFile = {
   extensions?: string[];
   fromDevicePolicy: string[];
   toDevicePolicy: string[];
+  acls: ACL[];
 };
 
 export const DefaultMudInfo: MudFile = {
@@ -22,4 +25,5 @@ export const DefaultMudInfo: MudFile = {
   isSupported: true,
   fromDevicePolicy: [],
   toDevicePolicy: [],
+  acls: [],
 };
