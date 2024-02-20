@@ -8,9 +8,15 @@ export function getInitMudContext() {
 }
 
 export const MudContext = React.createContext<{
+  blockedPolicies: string[];
+  addBlockedPolicy: (policy: string) => void;
+  removeBlockedPolicy: (policy: string) => void;
   mud: MudFile;
   refresh: () => void;
 }>({
+  blockedPolicies: [],
+  addBlockedPolicy() {},
+  removeBlockedPolicy() {},
   mud: DefaultMudInfo,
   refresh() {},
 });

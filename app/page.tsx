@@ -12,6 +12,7 @@ import React, { useState } from "react";
 
 export default function Home() {
   const [mud, setMud] = useState<MudFile>({ ...DefaultMudInfo });
+  const [blockedPolicies, setBlockedPolicies] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
   const refreshMud = () => {
@@ -28,6 +29,15 @@ export default function Home() {
     setLoading(false);
   };
 
+  const removeBlockedPolicy = (policy: string) => {
+    setBlockedPolicies(blockedPolicies.filter((v) => v != policy));
+  };
+
+  const addBlockedPolicy = (policy: string) => {
+    let newPolicies = [...blockedPolicies, policy];
+    setBlockedPolicies(newPolicies);
+  };
+
   React.useEffect(function initMudLoad() {
     setTimeout(() => {
       refreshMud();
@@ -41,7 +51,15 @@ export default function Home() {
   let showMud = false;
 
   return (
-    <MudContext.Provider value={{ mud, refresh: refreshMud }}>
+    <MudContext.Provider
+      value={{
+        blockedPolicies,
+        addBlockedPolicy,
+        removeBlockedPolicy,
+        mud,
+        refresh: refreshMud,
+      }}
+    >
       <div className="flex flex-col gap-y-4">
         <Navbar />
         <section className="px-6 flex flex-col gap-y-8">

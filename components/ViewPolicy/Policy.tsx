@@ -34,6 +34,7 @@ export default function Policy(props: PolicyProps) {
           <table className="table">
             <thead>
               <tr>
+                <th>Status</th>
                 <th>Name</th>
                 <th>
                   {props.direction == "from-device" ? "Destination" : "Source"}
