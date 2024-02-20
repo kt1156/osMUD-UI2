@@ -96,7 +96,9 @@ class MudParser {
       mudInfo.acls = AclParser.parseAll(mud[k]);
     });
 
-    console.log("mud info\n", mudInfo);
+    if (typeof window != "undefined") {
+      console.log("mud info\n", mudInfo);
+    }
     return mudInfo;
   }
 }

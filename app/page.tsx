@@ -38,6 +38,8 @@ export default function Home() {
     return <ScreenLoading />;
   }
 
+  let showMud = false;
+
   return (
     <MudContext.Provider value={{ mud, refresh: refreshMud }}>
       <div className="flex flex-col gap-y-4">
@@ -46,10 +48,14 @@ export default function Home() {
           <MudInfo />
           <PolicyList />
 
-          <div className="border-b border-black mt-8" />
-          <pre>{JSON.stringify(mud, undefined, 2)}</pre>
-          <div className="border-b border-black" />
-          <pre>{JSON.stringify(MudStore.LoadJson(), undefined, 2)}</pre>
+          {showMud && (
+            <>
+              <div className="border-b border-black mt-8" />
+              <pre>{JSON.stringify(mud, undefined, 2)}</pre>
+              <div className="border-b border-black" />
+              <pre>{JSON.stringify(MudStore.LoadJson(), undefined, 2)}</pre>
+            </>
+          )}
         </section>
       </div>
     </MudContext.Provider>
