@@ -83,16 +83,17 @@ class MudParser {
     return info;
   }
 
+  aclsKeys = [
+    "ietf-access-control-list:acls",
+    "ietf-access-control-list:access-lists",
+  ];
+
   parse(mud: any): MudFile {
     const mudKeys = Object.keys(mud);
     const mudInfo = this.extractMudInfo(mud["ietf-mud:mud"]);
 
-    const aclsKeys = [
-      "ietf-access-control-list:acls",
-      "ietf-access-control-list:access-lists",
-    ];
     mudKeys.forEach((k) => {
-      if (aclsKeys.indexOf(k) == -1) return;
+      if (this.aclsKeys.indexOf(k) == -1) return;
       mudInfo.acls = AclParser.parseAll(mud[k]);
     });
 
@@ -100,6 +101,20 @@ class MudParser {
       console.log("mud info\n", mudInfo);
     }
     return mudInfo;
+  }
+
+  removePolicies(mud: any, policies: string[]): any {
+    const mudKeys = Object.keys(mud);
+    mudKeys.forEach((k) => {
+      if (this.aclsKeys.indexOf(k) == -1) return;
+      mud[k]["acl"].forEach((acl: any) => {
+        acl["aces"]["ace"] = acl["aces"]["ace"].filter(
+          (ace: any) => !policies.includes(ace["name"])
+        );
+      });
+    });
+
+    return mud;
   }
 }
 

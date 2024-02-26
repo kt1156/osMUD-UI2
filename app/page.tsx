@@ -26,6 +26,7 @@ export default function Home() {
 
     let newMud = MudParser.parse(loadedMud);
     setMud(newMud);
+    setBlockedPolicies([]);
     setLoading(false);
   };
 

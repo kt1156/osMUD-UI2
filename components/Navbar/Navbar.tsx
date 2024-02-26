@@ -5,14 +5,16 @@ import LoadFile from "./LoadFile";
 import classNames from "classnames";
 import MudStore from "@/services/MudStore";
 import { MudContext } from "@/contexts/MudContext";
+import SaveMud from "./SaveMud";
 
 export default function Navbar() {
   var MudCtx = React.useContext(MudContext);
   const btnClassName = "btn-sm btn-neutral";
 
   return (
-    <div className="w-full flex flex-row gap-x-2 bg-base-200 p-6">
+    <div className="w-full flex flex-row gap-x-4 bg-base-200 p-6">
       <LoadFile buttonClassName={btnClassName} />
+      <SaveMud buttonClassName={btnClassName} />
       <div className="ml-auto">
         <button
           className="btn btn-sm btn-error"
