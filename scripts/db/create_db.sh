@@ -12,7 +12,7 @@ COMMAND="sqlite3 $DBDIR \"${SQL}\""
 eval $COMMAND
 
 if [[ $? == 0 ]]; then
-    echo Created DB at $DBDIR
+    echo DB at $DBDIR
     exit 0
 else
     exit 1
