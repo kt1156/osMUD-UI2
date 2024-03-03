@@ -7,10 +7,40 @@ import ScreenLoading from "@/components/ScreenLoading";
 import { MudContext } from "@/contexts/MudContext";
 import MudParser from "@/services/MudParser";
 import MudStore from "@/services/MudStore";
+import DeviceService from "@/services/api/DeviceService";
+import { ApiError } from "@/services/api/NetworkService";
 import { MudFile, DefaultMudInfo } from "@/types/Mud";
 import React, { useState } from "react";
+import { useQuery } from "react-query";
+import { useSearchParams } from "next/navigation";
 
-export default function Home() {
+export default function page() {
+  const searchParams = useSearchParams();
+  useQuery<any, ApiError>(
+    "getDevice",
+    () => {
+      const urlMacAddress = searchParams.get("mac");
+      if (urlMacAddress != null)
+        return DeviceService.GetDeviceMudFile(urlMacAddress);
+      else
+        throw {
+          status: 404,
+          message: "no mac provided",
+        } as ApiError;
+    },
+    {
+      retry: false,
+      refetchOnWindowFocus: false,
+      refetchOnReconnect: false,
+      refetchOnMount: false,
+      onSettled: (data, error) => {
+        if (error == null) {
+          setMud(MudParser.parse(data));
+        }
+        setLoading(false);
+      },
+    }
+  );
   const [mud, setMud] = useState<MudFile>({ ...DefaultMudInfo });
   const [blockedPolicies, setBlockedPolicies] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
@@ -38,12 +68,6 @@ export default function Home() {
     let newPolicies = [...blockedPolicies, policy];
     setBlockedPolicies(newPolicies);
   };
-
-  React.useEffect(function initMudLoad() {
-    setTimeout(() => {
-      refreshMud();
-    }, 500);
-  }, []);
 
   if (loading) {
     return <ScreenLoading />;

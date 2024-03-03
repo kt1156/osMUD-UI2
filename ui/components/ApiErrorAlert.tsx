@@ -1,4 +1,4 @@
-import { ApiError } from "@/services/NetworkService";
+import { ApiError } from "@/services/api/NetworkService";
 import React from "react";
 
 export default function ApiErrorAlert({ error }: { error: ApiError }) {

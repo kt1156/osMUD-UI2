@@ -34,5 +34,7 @@ func (api *API) Start(port string) error {
 
 func (api *API) registerRoutes() {
 	api.r.Get("/health", api.healthcheck)
-	api.r.Get("/osmud/all", api.GetAllOsMudEntries)
+	api.r.Get("/osmud", api.GetAllOsMudEntries)
+	api.r.Get("/osmud/{macAddress}", api.GetOsMudEntry)
+	api.r.Get("/osmud/{macAddress}/mud", api.GetMudFileForDevice)
 }

@@ -3,24 +3,14 @@ package main
 import (
 	"net/http"
 	"net/url"
+	"os"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/render"
 	"go.uber.org/zap"
 )
 
-func (api *API) GetAllOsMudEntries(w http.ResponseWriter, r *http.Request) {
-	entries, err := api.osMudReader.ReadAll()
-	if err != nil {
-		api.l.Error("error fetching all records", zap.Error(err))
-		render.Render(w, r, ErrInternalServerError(err))
-		return
-	}
-
-	render.JSON(w, r, entries)
-}
-
-func (api *API) GetOsMudEntry(w http.ResponseWriter, r *http.Request) {
+func (api *API) GetMudFileForDevice(w http.ResponseWriter, r *http.Request) {
 	macAddressParam := chi.URLParam(r, "macAddress")
 	macAddressDecoded, err := url.QueryUnescape(macAddressParam)
 	if err != nil {
@@ -41,5 +31,13 @@ func (api *API) GetOsMudEntry(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	render.JSON(w, r, entry)
+	file, err := os.ReadFile(entry.MudLocation) // This location is only set by osmud
+	if err != nil {
+		api.l.Error("error attempting to read file", zap.Error(err))
+		render.Render(w, r, ErrInternalServerError(err))
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	w.Write(file)
 }

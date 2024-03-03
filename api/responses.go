@@ -35,3 +35,11 @@ func ErrBadRequest(err error) render.Renderer {
 		Status:  http.StatusBadRequest,
 	}
 }
+
+func ErrNotFound() render.Renderer {
+	return &HttpErrResponse{
+		Ok:      false,
+		Message: "Not Found",
+		Status:  http.StatusNotFound,
+	}
+}

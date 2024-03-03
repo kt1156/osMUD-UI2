@@ -1,4 +1,4 @@
-import { OsMudEntry } from "@/services/DeviceService";
+import { OsMudEntry } from "@/services/api/DeviceService";
 import React from "react";
 
 interface DeviceListProps {
@@ -24,7 +24,12 @@ export default function DeviceList({ data }: DeviceListProps) {
               <td>{d.hostname}</td>
               <td>{d.ip}</td>
               <td>
-                <button className="btn btn-sm btn-neutral">Edit</button>
+                <a
+                  href={`/editor?mac=${encodeURIComponent(d.macAddress)}`}
+                  className="btn btn-sm btn-neutral"
+                >
+                  Edit
+                </a>
               </td>
             </tr>
           ))}

@@ -2,10 +2,9 @@
 
 import ApiErrorAlert from "@/components/ApiErrorAlert";
 import DeviceList from "@/components/DeviceList";
-import Navbar from "@/components/Navbar/Navbar";
 import ScreenLoading from "@/components/ScreenLoading";
-import DeviceService, { OsMudEntry } from "@/services/DeviceService";
-import { ApiError } from "@/services/NetworkService";
+import DeviceService, { OsMudEntry } from "@/services/api/DeviceService";
+import { ApiError } from "@/services/api/NetworkService";
 import React from "react";
 import { useQuery } from "react-query";
 

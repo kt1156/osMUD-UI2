@@ -13,6 +13,9 @@ export default function Navbar() {
 
   return (
     <div className="w-full flex flex-row gap-x-4 bg-base-200 p-6">
+      <a href="/overview" className={classNames("btn", btnClassName)}>
+        Back to overview
+      </a>
       <LoadFile buttonClassName={btnClassName} />
       <SaveMud buttonClassName={btnClassName} />
       <div className="ml-auto">

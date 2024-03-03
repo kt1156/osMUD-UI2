@@ -48,3 +48,30 @@ func (r *OsMudReader) ReadAll() (*[]osmud.OSMudEntry, error) {
 
 	return &response, nil
 }
+
+func (r *OsMudReader) GetOne(macAddress string) (*osmud.OSMudEntry, error) {
+	rows, err := r.db.Query("SELECT mac_address, ip, mud_url, mud_loc, hostname FROM mudfiles WHERE mac_address = ?", macAddress)
+	if err != nil {
+		r.l.Error("error performing read all query", zap.Error(err))
+		return nil, err
+	}
+
+	var response *osmud.OSMudEntry
+
+	defer rows.Close()
+	for rows.Next() {
+		response = &osmud.OSMudEntry{}
+		err = rows.Scan(&response.MacAddress, &response.Ip, &response.MudUrl, &response.MudLocation, &response.Hostname)
+		if err != nil {
+			r.l.Error("error reading row", zap.Error(err))
+			return nil, err
+		}
+	}
+	err = rows.Err()
+	if err != nil {
+		r.l.Error("error reading rows", zap.Error(err))
+		return nil, err
+	}
+
+	return response, nil
+}
