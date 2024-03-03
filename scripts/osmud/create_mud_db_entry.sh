@@ -48,7 +48,7 @@ if [[ -z "${SRC_MAC_ADDR/ //}" ]]; then
     exit 1
 fi
 
-SQL="INSERT INTO mudfiles (mac_address, ip, mud_url, mud_loc, hostname) VALUES ('${SRC_MAC_ADDR}', '${SRC_IP}', '${MUD_URL}', '${MUD_LOCAL_FILE}', '${HOST_NAME}');"
+SQL="INSERT or REPLACE INTO mudfiles (mac_address, ip, mud_url, mud_loc, hostname) VALUES ('${SRC_MAC_ADDR}', '${SRC_IP}', '${MUD_URL}', '${MUD_LOCAL_FILE}', '${HOST_NAME}');"
 
 COMMAND="sqlite3 $DBDIR \"${SQL}\""
 eval $COMMAND
