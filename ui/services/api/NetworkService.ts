@@ -46,8 +46,8 @@ class NetworkService {
     return this.fetch(route, "GET") as T;
   }
 
-  async post<T>(route: string, body: object) {
-    return this.fetch(route, "POST", body) as T;
+  async put<T>(route: string, body: object) {
+    return this.fetch(route, "PUT", body) as T;
   }
 
   async delete<T>(route: string) {

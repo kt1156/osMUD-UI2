@@ -1,8 +1,10 @@
 import { MudContext } from "@/contexts/MudContext";
 import MudParser from "@/services/MudParser";
 import MudStore from "@/services/MudStore";
+import ManagerService from "@/services/api/ManagerService";
 import classNames from "classnames";
-import React from "react";
+import { useSearchParams } from "next/navigation";
+import React, { useContext } from "react";
 import { flushSync } from "react-dom";
 
 interface SaveMudProps {
@@ -10,39 +12,32 @@ interface SaveMudProps {
 }
 
 export default function SaveMud(props: SaveMudProps) {
-  const fileDownloadElement = React.useRef<HTMLAnchorElement>(null);
-  const [fileText, setFileText] = React.useState("");
   const { blockedPolicies } = React.useContext(MudContext);
+  const searchParams = useSearchParams();
+  const mudCtx = useContext(MudContext);
 
-  function download() {
+  function save() {
     const newMud = MudParser.removePolicies(
-      MudStore.LoadJson(),
+      JSON.parse(JSON.stringify(mudCtx.rawMud)),
       blockedPolicies
     );
-    console.log("newMud: ", newMud);
-    flushSync(() => {
-      setFileText(encodeURI(JSON.stringify(newMud, undefined, 2)));
-    });
-    fileDownloadElement.current?.click();
+    const macAddress = searchParams.get("mac");
+    if (macAddress != null) {
+      ManagerService.SetMud(macAddress, newMud);
+      mudCtx.refresh();
+    }
   }
 
   return (
     <>
       <button
-        onClick={download}
+        onClick={save}
         className={classNames("btn", props.buttonClassName, {
-          "btn-disabled": blockedPolicies.length == 0,
+          "btn-disabled": mudCtx.refreshing,
         })}
       >
-        Download Updated MUD
+        Apply MUD File
       </button>
-      <a
-        hidden
-        target="_blank"
-        href={"data:attachment/text," + fileText}
-        download="new_mud.json"
-        ref={fileDownloadElement}
-      />
     </>
   );
 }

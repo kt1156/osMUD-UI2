@@ -5,6 +5,7 @@ import Modal from "../Modal";
 import { MudContext } from "@/contexts/MudContext";
 import MudStore from "@/services/MudStore";
 import ModalService from "@/services/ModalService";
+import classNames from "classnames";
 
 interface LoadFileProps {
   buttonClassName?: string;
@@ -25,7 +26,7 @@ export default function LoadFile(props: LoadFileProps) {
     }
 
     MudStore.StoreJson(files);
-    MudCtx.refresh();
+    MudCtx.load();
 
     ModalService.closeWithId(modalId);
   }
@@ -35,7 +36,9 @@ export default function LoadFile(props: LoadFileProps) {
       <Modal
         id={modalId}
         title="Load MUD File"
-        className={props.buttonClassName}
+        className={classNames(props.buttonClassName, {
+          "btn-disabled": MudCtx.refreshing,
+        })}
       >
         <div className="flex flex-col">
           <h2 className="font-semibold text-2xl mb-2">Load File</h2>

@@ -16,7 +16,7 @@ import { useSearchParams } from "next/navigation";
 
 export default function page() {
   const searchParams = useSearchParams();
-  useQuery<any, ApiError>(
+  const { refetch } = useQuery<any, ApiError>(
     "getDevice",
     () => {
       const urlMacAddress = searchParams.get("mac");
@@ -36,26 +36,41 @@ export default function page() {
       onSettled: (data, error) => {
         if (error == null) {
           setMud(MudParser.parse(data));
+          setRawMud(data);
         }
         setLoading(false);
+        setRefreshing(false);
       },
     }
   );
   const [mud, setMud] = useState<MudFile>({ ...DefaultMudInfo });
+  const [rawMud, setRawMud] = useState<any>({});
   const [blockedPolicies, setBlockedPolicies] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
 
   const refreshMud = () => {
+    setRefreshing(true);
+    setBlockedPolicies([]);
+    setMud({ ...DefaultMudInfo });
+    setRawMud({});
+    setTimeout(() => {
+      refetch();
+    }, 10000); // TODO: Create an endpoint to check if its updated instead of just waiting 10 seconds
+  };
+
+  const loadMud = () => {
     setLoading(true);
     let loadedMud = MudStore.LoadJson();
     if (loadedMud == null) {
       setLoading(false);
       setMud({ ...DefaultMudInfo });
-      return null;
+      return;
     }
 
     let newMud = MudParser.parse(loadedMud);
     setMud(newMud);
+    setRawMud(loadedMud);
     setBlockedPolicies([]);
     setLoading(false);
   };
@@ -82,24 +97,34 @@ export default function page() {
         addBlockedPolicy,
         removeBlockedPolicy,
         mud,
+        rawMud,
         refresh: refreshMud,
+        refreshing,
+        load: loadMud,
       }}
     >
       <div className="flex flex-col gap-y-4">
         <Navbar />
-        <section className="px-6 flex flex-col gap-y-8">
-          <MudInfo />
-          <PolicyList />
+        {refreshing ? (
+          <div className="my-14 flex flex-col place-items-center justify-center text-primary-content">
+            <span className="loading loading-ring loading-lg"></span>
+            <p className="font-semibold mt-6">Applying MUD Policy...</p>
+          </div>
+        ) : (
+          <section className="px-6 flex flex-col gap-y-8">
+            <MudInfo />
+            <PolicyList />
 
-          {showMud && (
-            <>
-              <div className="border-b border-black mt-8" />
-              <pre>{JSON.stringify(mud, undefined, 2)}</pre>
-              <div className="border-b border-black" />
-              <pre>{JSON.stringify(MudStore.LoadJson(), undefined, 2)}</pre>
-            </>
-          )}
-        </section>
+            {showMud && (
+              <>
+                <div className="border-b border-black mt-8" />
+                <pre>{JSON.stringify(mud, undefined, 2)}</pre>
+                <div className="border-b border-black" />
+                <pre>{JSON.stringify(MudStore.LoadJson(), undefined, 2)}</pre>
+              </>
+            )}
+          </section>
+        )}
       </div>
     </MudContext.Provider>
   );

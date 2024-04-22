@@ -10,7 +10,7 @@ import (
 	"go.uber.org/zap"
 )
 
-func (api *API) GetMudFileForDevice(w http.ResponseWriter, r *http.Request) {
+func (api *API) GetOsMudFile(w http.ResponseWriter, r *http.Request) {
 	macAddressParam := chi.URLParam(r, "macAddress")
 	macAddressDecoded, err := url.QueryUnescape(macAddressParam)
 	if err != nil {

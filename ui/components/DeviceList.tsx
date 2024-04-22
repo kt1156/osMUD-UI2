@@ -1,13 +1,18 @@
-import { OsMudEntry } from "@/services/api/DeviceService";
+import DeviceService, { OsMudEntry } from "@/services/api/DeviceService";
+import { ApiError } from "@/services/api/NetworkService";
 import React from "react";
+import { useQuery } from "react-query";
+import ApiErrorAlert from "./ApiErrorAlert";
 
-interface DeviceListProps {
-  data: OsMudEntry[];
-}
+export default function DeviceList() {
+  const { isLoading, error, data } = useQuery<OsMudEntry[], ApiError>(
+    "deviceList",
+    DeviceService.GetAllDevices
+  );
 
-export default function DeviceList({ data }: DeviceListProps) {
   return (
     <div className="overflow-x-auto">
+      {error && <ApiErrorAlert error={error} />}
       <table className="table">
         <thead>
           <tr>
@@ -18,7 +23,7 @@ export default function DeviceList({ data }: DeviceListProps) {
           </tr>
         </thead>
         <tbody>
-          {data.map((d) => (
+          {data?.map((d) => (
             <tr key={d.hostname}>
               <th>{d.macAddress}</th>
               <td>{d.hostname}</td>
@@ -33,6 +38,22 @@ export default function DeviceList({ data }: DeviceListProps) {
               </td>
             </tr>
           ))}
+          {isLoading && (
+            <tr>
+              <th>
+                <div className="skeleton my-2 h-4 w-28" />
+              </th>
+              <td>
+                <div className="skeleton my-2 h-4 w-28" />
+              </td>
+              <td>
+                <div className="skeleton my-2 h-4 w-28" />
+              </td>
+              <td>
+                <div className="skeleton my-2 h-4 w-16" />
+              </td>
+            </tr>
+          )}
         </tbody>
       </table>
     </div>

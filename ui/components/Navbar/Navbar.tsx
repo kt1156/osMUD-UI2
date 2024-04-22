@@ -13,22 +13,20 @@ export default function Navbar() {
 
   return (
     <div className="w-full flex flex-row gap-x-4 bg-base-200 p-6">
-      <a href="/overview" className={classNames("btn", btnClassName)}>
+      <a href="/overview" className={classNames("btn btn-sm btn-ghost")}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fillRule="evenodd"
+          clipRule="evenodd"
+          viewBox="0 0 24 24"
+          className="fill-current size-5"
+        >
+          <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z" />
+        </svg>
         Back to overview
       </a>
       <LoadFile buttonClassName={btnClassName} />
       <SaveMud buttonClassName={btnClassName} />
-      <div className="ml-auto">
-        <button
-          className="btn btn-sm btn-error"
-          onClick={(e) => {
-            MudStore.ClearJson();
-            MudCtx.refresh();
-          }}
-        >
-          Reset
-        </button>
-      </div>
     </div>
   );
 }
