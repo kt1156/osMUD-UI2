@@ -30,7 +30,7 @@ export default function LoadFile(props: LoadFileProps) {
 
     ModalService.closeWithId(modalId);
   }
-
+  console.log("Load: ", Date.now())
   return (
     <>
       <Modal

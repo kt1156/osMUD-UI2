@@ -31,3 +31,11 @@ $ curl localhost:8080/health
 7. Next run `npm run dev` to start the development server, more information about the ui sever is provided in the README in this directory.
 - If you have changed the port the API starts on, you also need to provide this to the ui in the `API_URL` environment variable. If you have not changed it from the defaults, the ui automatically uses the default which is port 8080. (This is used in `/ui/next.config.mjs` to proxy ui requests to `/api/...` to the local api server at `localhost:8080/...` as explained [here](https://nextjs.org/docs/app/api-reference/next-config-js/rewrites))
 8. You can now navigate to `http://localhost:3000` in a browser and should see the MUD ui.
+
+## Tools
+
+### MUD File Maker 
+Python script for generating arbitrary length MUD files for testing. Specify number of rules to generate. Found in root folder
+
+### Batch Create MUD DB Entry
+Run `./batch_create_mud_db_entry.sh` in /scripts/osmud/ with a number of devices to add to add that number of devices to the database. All devices have name test_device_n and a sequential MAC address.
