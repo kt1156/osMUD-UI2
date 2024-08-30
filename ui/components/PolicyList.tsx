@@ -13,6 +13,7 @@ interface PolicyListNavigationProps {
 }
 
 function PolicyListNavigation(props: PolicyListNavigationProps) {
+  console.log("Loaded: ", Date.now())
   return (
     <ul className="menu w-full rounded-box">
       <li>

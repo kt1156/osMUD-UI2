@@ -1,0 +1,1321 @@
+{
+    "ietf-mud:mud": {
+        "mud-version": 1,
+        "mud-url": "https://example.com/mud/device-mud.json",
+        "last-update": "2024-08-19T11:48:11Z",
+        "cache-validity": 48,
+        "is-supported": true,
+        "systeminfo": "Example IoT Device",
+        "mfg-name": "Example Manufacturer",
+        "model-name": "Example Device Model 1",
+        "documentation": "https://example.com/docs/device-doc.html",
+        "ietf-mud:to-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "to-device-policy-1",
+                        "type": "ipv4-acl-type",
+                        "aces": {
+                            "ace": [
+                                {
+                                    "name": "to-device-rule-1",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1000
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-2",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1001
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-3",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1002
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-4",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1003
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-5",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1004
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-6",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1005
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-7",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1006
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-8",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1007
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-9",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1008
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-10",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1009
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-11",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1010
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-12",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1011
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-13",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1012
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-14",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1013
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-15",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1014
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-16",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1015
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-17",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1016
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-18",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1017
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-19",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1018
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-20",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1019
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-21",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1020
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-22",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1021
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-23",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1022
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-24",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1023
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-25",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1024
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-26",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1025
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-27",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1026
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-28",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1027
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-29",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1028
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-30",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1029
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-31",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1030
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-32",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1031
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-33",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1032
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-34",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1033
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-35",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1034
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-36",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1035
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-37",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1036
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-38",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1037
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-39",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1038
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-40",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "source-port": {
+                                                "port": 1039
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "ietf-mud:from-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "from-device-policy-1",
+                        "type": "ipv4-acl-type",
+                        "aces": {
+                            "ace": [
+                                {
+                                    "name": "from-device-rule-1",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2000
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-2",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2001
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-3",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2002
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-4",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2003
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-5",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2004
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-6",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2005
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-7",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2006
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-8",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2007
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-9",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2008
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-10",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2009
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-11",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2010
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-12",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2011
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-13",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2012
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-14",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2013
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-15",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2014
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-16",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2015
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-17",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2016
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-18",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2017
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-19",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2018
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-20",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2019
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-21",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2020
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-22",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2021
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-23",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2022
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-24",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2023
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-25",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2024
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-26",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2025
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-27",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2026
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-28",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2027
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-29",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2028
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-30",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2029
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-31",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2030
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-32",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2031
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-33",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2032
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-34",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2033
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-35",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2034
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-36",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2035
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-37",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2036
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-38",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2037
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-39",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2038
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-40",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 2039
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
