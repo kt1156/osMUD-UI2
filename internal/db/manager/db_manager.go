@@ -4,7 +4,7 @@ import (
 	"database/sql"
 
 	"github.com/LouisHatton/MUD-UI/internal/db"
-	_ "github.com/mattn/go-sqlite3"
+	_ "modernc.org/sqlite"
 
 	"go.uber.org/zap"
 )
@@ -30,7 +30,7 @@ func (m *DbManager) GetDatabase() (*sql.DB, error) {
 		return m.db, nil
 	}
 
-	db, err := sql.Open("sqlite3", m.dbFileLoc)
+	db, err := sql.Open("sqlite", m.dbFileLoc)
 	if err != nil {
 		m.l.Error("error opening sqlite database", zap.Error(err))
 		return nil, err
