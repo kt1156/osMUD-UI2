@@ -1,6 +1,6 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/peter/Proj/MUD_TEMP/MUD-UI'
+make: Entering directory '/home/peter/Proj/MUD-UI'
 go build -o bin/dhcp_mock ./tools/dhcp_mock
 go build -o bin/api ./api
-make: Leaving directory '/home/peter/Proj/MUD_TEMP/MUD-UI'
+make: Leaving directory '/home/peter/Proj/MUD-UI'
  

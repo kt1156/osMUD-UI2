@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Aug 16 16:05:30 2024
+# Make data base, printed on Thu Sep  5 11:59:52 2024
 
 # Variables
 
@@ -19,7 +19,10 @@ PULSE_SERVER = unix:/mnt/wslg/PulseServer
 # environment
 HOMEBREW_PREFIX = /home/linuxbrew/.linuxbrew
 # environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up
+define WSLENV
+ELECTRON_RUN_AS_NODE/w:
+
+endef
 # environment
 VSCODE_CWD = /mnt/c/Users/pg850/AppData/Local/Programs/Microsoft VS Code
 # environment
@@ -47,7 +50,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /home/peter/Proj/MUD_TEMP/MUD-UI
+PWD = /home/peter/Proj/MUD-UI
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -71,7 +74,7 @@ HOMEBREW_REPOSITORY = /home/linuxbrew/.linuxbrew/Homebrew
 # makefile
 MAKEFLAGS = pqrR
 # makefile
-CURDIR := /home/peter/Proj/MUD_TEMP/MUD-UI
+CURDIR := /home/peter/Proj/MUD-UI
 # environment
 VSCEXT_EXHORT_GO_PATH = go
 # environment
@@ -125,15 +128,17 @@ SHELL = /bin/sh
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 0
+SHLVL = 1
 # environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /home/peter/.vscode-server/bin/fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/bin/remote-cli:/home/peter/.local/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/peter/.nvm/versions/node/v20.13.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/Program Files/MiKTeX/miktex/bin/x64/:/mnt/c/ProgramData/Anaconda3:/mnt/c/ProgramData/Anaconda3/Scripts:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/MATLAB/R2024a/runtime/win64:/mnt/c/Program Files/MATLAB/R2024a/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/PowerShell/7/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Go/bin:/mnt/c/Ruby31-x64/bin:/mnt/c/Ruby32-x64/bin:/mnt/c/Users/pg850/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/pg850/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/pg850/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/c/Users/pg850/AppData/Roaming/npm:/mnt/c/Users/pg850/go/bin:/mnt/c/Users/pg850/.dotnet/tools:/snap/bin:/home/peter/Proj/MUD-UI/:/usr/bin:/home/peter/osmud/
+PATH = /home/peter/.vscode-server/bin/fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/bin/remote-cli:/home/peter/.local/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/peter/.nvm/versions/node/v20.13.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/Program Files/MiKTeX/miktex/bin/x64/:/mnt/c/ProgramData/Anaconda3:/mnt/c/ProgramData/Anaconda3/Scripts:/mnt/c/Users/pg850/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/MATLAB/R2024a/runtime/win64:/mnt/c/Program Files/MATLAB/R2024a/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Go/bin:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Ruby31-x64/bin:/mnt/c/Ruby32-x64/bin:/mnt/c/Users/pg850/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/pg850/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/pg850/AppData/Roaming/nvm:/mnt/c/Users/pg850/AppData/Roaming/npm:/mnt/c/Users/pg850/go/bin:/mnt/c/Users/pg850/.dotnet/tools:/snap/bin:/home/peter/Proj/MUD-UI/:/usr/bin:/home/peter/osmud/
 # default
 MAKEFILES := 
+# environment
+MOTD_SHOWN = update-motd
 # automatic
 ^F = $(notdir $^)
 # environment
@@ -151,7 +156,7 @@ VSCEXT_STACK_ANALYSIS_COMMAND = rhda.stackAnalysis
 # automatic
 ?F = $(notdir $?)
 # environment
-NAME = UOY22Y177
+NAME = Code
 # environment
 VSCEXT_EXHORT_NPM_PATH = npm
 # environment
@@ -161,7 +166,7 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # automatic
 +F = $(notdir $+)
 # environment
-WSL_INTEROP = /run/WSL/153949_interop
+WSL_INTEROP = /run/WSL/1281_interop
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -191,11 +196,11 @@ VSCEXT_UTM_SOURCE = vscode
 # environment
 HOMEBREW_CELLAR = /home/linuxbrew/.linuxbrew/Cellar
 # environment
-_ = /home/peter/.vscode-server/bin/fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/node
+_ = /mnt/c/Users/pg850/AppData/Local/Programs/Microsoft VS Code/bin/code
 # environment
 XDG_RUNTIME_DIR = /run/user/1000/
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/1000/vscode-ipc-3518eba7-90a3-4ab9-a803-f2398cc8fb5b.sock
+VSCODE_IPC_HOOK_CLI = /run/user/1000/vscode-ipc-4453a8e1-3b05-45ae-833b-6c877e09b9e1.sock
 # environment
 VSCEXT_EXHORT_PYTHON3_PATH = python3
 # environment
@@ -229,7 +234,7 @@ WSL_DISTRO_NAME = Ubuntu-22.04
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs notintermediate shell-export archives jobserver jobserver-fifo output-sync check-symlink load
 # variable set hash-table stats:
-# Load=109/1024=11%, Rehash=0, Collisions=12/144=8%
+# Load=110/1024=11%, Rehash=0, Collisions=12/145=8%
 
 # Pattern-specific Variable Values
 
@@ -237,9 +242,9 @@ WSL_DISTRO_NAME = Ubuntu-22.04
 
 # Directories
 
-# . (device 2080, inode 23649): 16 files, no impossibilities.
+# . (device 2080, inode 538): 17 files, no impossibilities.
 
-# 16 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -251,7 +256,7 @@ WSL_DISTRO_NAME = Ubuntu-22.04
 Makefile:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2024-08-14 11:22:53.883070522
+#  Last modified 2024-09-05 11:58:55.16760906
 #  File has been updated.
 #  Successfully updated.
 
@@ -269,13 +274,13 @@ clean:
 #  Modification time never checked.
 #  File has not been updated.
 
+ 
 all: dhcp_mock.build api.build
 #  Command line target.
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
- 
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/4=0%
 
@@ -327,12 +332,12 @@ dhcp_mock.build:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 25 / storage = 242 B / avg = 9 B
-# current buf: size = 8162 B / used = 242 B / count = 25 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 26 / storage = 268 B / avg = 10 B
+# current buf: size = 8162 B / used = 268 B / count = 26 / avg = 10 B
 
-# strcache performance: lookups = 36 / hit rate = 30%
+# strcache performance: lookups = 37 / hit rate = 29%
 # hash-table stats:
-# Load=25/8192=0%, Rehash=0, Collisions=0/36=0%
-# Finished Make data base on Fri Aug 16 16:05:30 2024
+# Load=26/8192=0%, Rehash=0, Collisions=0/37=0%
+# Finished Make data base on Thu Sep  5 11:59:52 2024
 
  
