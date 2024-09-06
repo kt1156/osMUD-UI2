@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Sep  5 11:59:52 2024
+# Make data base, printed on Fri Sep  6 11:10:39 2024
 
 # Variables
 
@@ -37,8 +37,6 @@ VSCEXT_TRACK_RECOMMENDATION_ACCEPTANCE_COMMAND = rhda.trackRecommendationAccepta
 MAKE_COMMAND := make
 # environment
 VSCODE_HANDLES_SIGPIPE = true
-# environment
-GOPATH = /home/peter/go
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
@@ -144,8 +142,6 @@ MOTD_SHOWN = update-motd
 # environment
 VSCEXT_USE_PIP_DEP_TREE = false
 # environment
-GOTELEMETRY_GOPLS_CLIENT_START_TIME = 1716555962
-# environment
 VSCEXT_TELEMETRY_ID = 177e3755-6484-4009-9f49-641b53b94290
 # environment
 VSCEXT_EXHORT_DOCKER_PATH = docker
@@ -166,13 +162,11 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # automatic
 +F = $(notdir $+)
 # environment
-WSL_INTEROP = /run/WSL/1281_interop
+WSL_INTEROP = /run/WSL/1021_interop
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
 LOGNAME = peter
-# environment
-GOTELEMETRY_GOPLS_CLIENT_TOKEN = 681
 # environment
 VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/pg850/.vscode/extensions/ms-vscode-remote.remote-wsl-0.88.2
 # environment
@@ -200,13 +194,11 @@ _ = /mnt/c/Users/pg850/AppData/Local/Programs/Microsoft VS Code/bin/code
 # environment
 XDG_RUNTIME_DIR = /run/user/1000/
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/1000/vscode-ipc-4453a8e1-3b05-45ae-833b-6c877e09b9e1.sock
+VSCODE_IPC_HOOK_CLI = /run/user/1000/vscode-ipc-c7db5ca9-e46e-41d4-ac01-af2e7fe306de.sock
 # environment
 VSCEXT_EXHORT_PYTHON3_PATH = python3
 # environment
 NVM_CD_FLAGS = 
-# environment
-GOMODCACHE = /home/peter/go/pkg/mod
 # environment
 VSCEXT_ENABLE_PYTHON_BEST_EFFORTS_INSTALLATION = false
 # environment
@@ -221,8 +213,6 @@ ELECTRON_RUN_AS_NODE = 1
 TERM = xterm-256color
 # environment
 VSCEXT_USE_GO_MVS = false
-# environment
-GOPROXY = https://proxy.golang.org,direct
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -234,7 +224,7 @@ WSL_DISTRO_NAME = Ubuntu-22.04
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs notintermediate shell-export archives jobserver jobserver-fifo output-sync check-symlink load
 # variable set hash-table stats:
-# Load=110/1024=11%, Rehash=0, Collisions=12/145=8%
+# Load=105/1024=10%, Rehash=0, Collisions=12/140=9%
 
 # Pattern-specific Variable Values
 
@@ -242,9 +232,9 @@ WSL_DISTRO_NAME = Ubuntu-22.04
 
 # Directories
 
-# . (device 2080, inode 538): 17 files, no impossibilities.
+# . (device 2080, inode 538): 18 files, no impossibilities.
 
-# 17 files, no impossibilities in 1 directories.
+# 18 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -274,7 +264,6 @@ clean:
 #  Modification time never checked.
 #  File has not been updated.
 
- 
 all: dhcp_mock.build api.build
 #  Command line target.
 #  Implicit rule search has been done.
@@ -286,6 +275,7 @@ all: dhcp_mock.build api.build
 
 api.build:
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 10):
@@ -332,12 +322,12 @@ dhcp_mock.build:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 26 / storage = 268 B / avg = 10 B
-# current buf: size = 8162 B / used = 268 B / count = 26 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 27 / storage = 272 B / avg = 10 B
+# current buf: size = 8162 B / used = 272 B / count = 27 / avg = 10 B
 
-# strcache performance: lookups = 37 / hit rate = 29%
+# strcache performance: lookups = 38 / hit rate = 28%
 # hash-table stats:
-# Load=26/8192=0%, Rehash=0, Collisions=0/37=0%
-# Finished Make data base on Thu Sep  5 11:59:52 2024
+# Load=27/8192=0%, Rehash=0, Collisions=0/38=0%
+# Finished Make data base on Fri Sep  6 11:10:39 2024
 
  
