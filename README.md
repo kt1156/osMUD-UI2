@@ -39,3 +39,7 @@ Python script for generating arbitrary length MUD files for testing. Specify num
 
 ### Batch Create MUD DB Entry
 Run `./batch_create_mud_db_entry.sh` in /scripts/osmud/ with a number of devices to add to add that number of devices to the database. All devices have name test_device_n and a sequential MAC address.
+
+## SSH
+
+ssh -v -oHostKeyAlgorithms=+ssh-rsa root@192.168.1.1
