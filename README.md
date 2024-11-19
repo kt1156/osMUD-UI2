@@ -2,7 +2,7 @@
 
 A tool to manage and edit Manufacturer Usage Description (MUD) files from the browser.
 
-## Getting Started
+## Running Locally
 
 1. Create database and move the new db access scripts to the correct directories. This is can be performed by using the `install.sh` script:
 
