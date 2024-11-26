@@ -56,11 +56,11 @@ To SCP a file to the RPi you need to use legacy options
 ## Launching the API on the RPi
 The API is an executable script stored in
 
-`~/tmp/api`
+`~/usr/bin/api`
 
 And can be launched with 
 
-`./tmp/api`
+`./usr/bin/api`
 
 from the root directory. This starts a server running at `192.168.1.1:8080`
 

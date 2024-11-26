@@ -1,174 +1,203 @@
-make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # GNU Make 4.4.1
-# Built for x86_64-pc-linux-gnu
+# Built for Windows32
 # Copyright (C) 1988-2023 Free Software Foundation, Inc.
 # License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Sep  6 11:10:39 2024
+# Make data base, printed on Tue Nov 26 11:47:53 2024
 
 # Variables
 
+# environment
+SYSTEMDRIVE = C:
 # environment
 LC_ALL = C
 # environment
 VSCEXT_EXHORT_SKOPEO_PATH = skopeo
 # environment
-PULSE_SERVER = unix:/mnt/wslg/PulseServer
+USERPROFILE = C:\Users\pg850
 # environment
-HOMEBREW_PREFIX = /home/linuxbrew/.linuxbrew
+LOCALAPPDATA = C:\Users\pg850\AppData\Local
 # environment
-define WSLENV
-ELECTRON_RUN_AS_NODE/w:
-
-endef
+WSLENV = WT_SESSION:WT_PROFILE_ID:
 # environment
-VSCODE_CWD = /mnt/c/Users/pg850/AppData/Local/Programs/Microsoft VS Code
+VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
+# environment
+VSCODE_CWD = C:\Users\pg850\Work\osMUD-UI
 # environment
 VSCEXT_EXHORT_IMAGE_PLATFORM = 
 # environment
-NVM_DIR = /home/peter/.nvm
+CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
+# environment
+SYSTEMROOT = C:\Windows
+# environment
+PROCESSOR_LEVEL = 6
+# environment
+PSMODULEPATH = C:\Users\pg850\OneDrive - University of York\Documents\PowerShell\Modules;C:\Program Files\PowerShell\Modules;c:\program files\powershell\7\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
 # environment
 VSCEXT_EXHORT_GRADLE_PATH = gradle
 # environment
 VSCEXT_TRACK_RECOMMENDATION_ACCEPTANCE_COMMAND = rhda.trackRecommendationAcceptance
 # default
-MAKE_COMMAND := make
+MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # environment
-VSCODE_HANDLES_SIGPIPE = true
+APPLICATIONINSIGHTS_CONFIGURATION_CONTENT = {}
+# environment
+USERDNSDOMAIN = its.york.ac.uk
+# environment
+GOPATH = C:\Users\pg850\go
 # automatic
-@D = $(patsubst %/,%,$(dir $@))
+@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
 VSCEXT_EXHORT_SYFT_CONFIG_PATH = 
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_6376_MHQDUPPVJNTFAFNR
 # environment
 VSCEXT_EXHORT_PIP_PATH = pip
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
-# environment
-PWD = /home/peter/Proj/MUD-UI
 # automatic
-%D = $(patsubst %/,%,$(dir $%))
-# environment
-XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
+%D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
 # environment
 VSCEXT_EXHORT_MVN_PATH = mvn
 # automatic
-^D = $(patsubst %/,%,$(dir $^))
+^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
 # automatic
 %F = $(notdir $%)
 # environment
-NVM_INC = /home/peter/.nvm/versions/node/v20.13.1/include/node
+VSCODE_CODE_CACHE_PATH = C:\Users\pg850\AppData\Roaming\Code\CachedData\f1a4fb101478ce6ec82fe9627c43efbf9e98c813
 # environment
 LANG = C
 # default
 .LOADED := 
 # environment
-HOMEBREW_REPOSITORY = /home/linuxbrew/.linuxbrew/Homebrew
+TMP = C:\Users\pg850\AppData\Local\Temp
 # default
-.INCLUDE_DIRS := /home/linuxbrew/.linuxbrew/Cellar/make/4.4.1/include /usr/local/include /usr/include
+.INCLUDE_DIRS := .
+# environment
+PROCESSOR_ARCHITEW6432 = AMD64
 # makefile
 MAKEFLAGS = pqrR
+# environment
+ONEDRIVE = C:\Users\pg850\OneDrive
+# environment
+POWERSHELL_DISTRIBUTION_CHANNEL = MSI:Windows 10 Enterprise
 # makefile
-CURDIR := /home/peter/Proj/MUD-UI
+CURDIR := c:/Users/pg850/Work/osMUD-UI
 # environment
 VSCEXT_EXHORT_GO_PATH = go
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
-# environment
-LESSOPEN = | /usr/bin/lesspipe %s
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 VSCODE_L10N_BUNDLE_LOCATION = 
 # automatic
-*D = $(patsubst %/,%,$(dir $*))
+*D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
 VSCEXT_EXHORT_PYTHON_PATH = python
+# environment
+PROGRAMFILES = C:\Program Files (x86)
 # environment
 MFLAGS = -pqrR
 # default
 .SHELLFLAGS := -c
 # environment
-NVM_BIN = /home/peter/.nvm/versions/node/v20.13.1/bin
-# environment
-WSL2_GUI_APPS_ENABLED = 1
-# environment
-WAYLAND_DISPLAY = wayland-0
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # automatic
-+D = $(patsubst %/,%,$(dir $+))
++D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST := Makefile
 # environment
 VSCEXT_EXHORT_PODMAN_PATH = podman
 # automatic
 @F = $(notdir $@)
+# environment
+VSCODE_PID = 6376
 # automatic
-?D = $(patsubst %/,%,$(dir $?))
+?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
+# environment
+__PSLOCKDOWNPOLICY = 0
 # environment
 VSCEXT_EXHORT_PIP3_PATH = pip3
+# environment
+WT_PROFILE_ID = {574e775e-4f2a-5b96-ac1e-a2962a402336}
 # automatic
 *F = $(notdir $*)
 # environment
 VSCEXT_EXHORT_SYFT_PATH = syft
-# environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # automatic
-<D = $(patsubst %/,%,$(dir $<))
+<D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
 # environment
-VSCODE_NLS_CONFIG = {"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/peter/.vscode-server/bin/fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/out/nls.messages.json","locale":"en","availableLanguages":{}}
+VSCODE_NLS_CONFIG = {"userLocale":"en-us","osLocale":"en-gb","resolvedLanguage":"en","defaultMessagesFile":"C:\\Users\\pg850\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\nls.messages.json","locale":"en-us","availableLanguages":{}}
 # default
-MAKE_HOST := x86_64-pc-linux-gnu
+MAKE_HOST := Windows32
 # environment
-INFOPATH = /home/linuxbrew/.linuxbrew/share/info:
-# makefile
-SHELL = /bin/sh
+PROGRAMDATA = C:\ProgramData
+# default
+SHELL := sh.exe
+# environment
+HOMEPATH = \Users\pg850
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 1
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+COMSPEC = C:\Windows\system32\cmd.exe
+# environment
+WINDIR = C:\Windows
 # environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /home/peter/.vscode-server/bin/fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/bin/remote-cli:/home/peter/.local/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/peter/.nvm/versions/node/v20.13.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/Program Files/MiKTeX/miktex/bin/x64/:/mnt/c/ProgramData/Anaconda3:/mnt/c/ProgramData/Anaconda3/Scripts:/mnt/c/Users/pg850/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/MATLAB/R2024a/runtime/win64:/mnt/c/Program Files/MATLAB/R2024a/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Go/bin:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Ruby31-x64/bin:/mnt/c/Ruby32-x64/bin:/mnt/c/Users/pg850/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/pg850/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/pg850/AppData/Roaming/nvm:/mnt/c/Users/pg850/AppData/Roaming/npm:/mnt/c/Users/pg850/go/bin:/mnt/c/Users/pg850/.dotnet/tools:/snap/bin:/home/peter/Proj/MUD-UI/:/usr/bin:/home/peter/osmud/
+PATH = C:\Program Files\PowerShell\7;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\MiKTeX\miktex\bin\x64\;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Scripts;%NVM_HOME%;%NVM_SYMLINK%;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\MATLAB\R2024a\runtime\win64;C:\Program Files\MATLAB\R2024a\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Go\bin;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7\;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Ruby31-x64\bin;C:\Ruby32-x64\bin;C:\Users\pg850\AppData\Local\Microsoft\WindowsApps;C:\Users\pg850\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\pg850\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\pg850\AppData\Roaming\npm;C:\Users\pg850\go\bin;C:\Users\pg850\.dotnet\tools
+# environment
+COMPUTERNAME = UOY22Y177
 # default
 MAKEFILES := 
-# environment
-MOTD_SHOWN = update-motd
 # automatic
 ^F = $(notdir $^)
 # environment
+PROMPT = $P$G
+# environment
+CHOCOLATEYLASTPATHUPDATE = 133673283549488681
+# environment
 VSCEXT_USE_PIP_DEP_TREE = false
 # environment
-VSCEXT_TELEMETRY_ID = 177e3755-6484-4009-9f49-641b53b94290
+WT_SESSION = 731637cb-c5d2-4530-b25f-3d06d09e1d07
+# environment
+LOGONSERVER = \\UOY22Y177
+# environment
+VSCEXT_TELEMETRY_ID = 912efb82-f9e9-4dc4-af8e-dd3d77d6a2e2
+# environment
+USERNAME = pg850
 # environment
 VSCEXT_EXHORT_DOCKER_PATH = docker
 # environment
-LESSCLOSE = /usr/bin/lesspipe %s %s
+COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
 # environment
 VSCEXT_STACK_ANALYSIS_COMMAND = rhda.stackAnalysis
 # automatic
 ?F = $(notdir $?)
 # environment
-NAME = Code
+PROGRAMW6432 = C:\Program Files
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW;.CPL
 # environment
 VSCEXT_EXHORT_NPM_PATH = npm
-# environment
-HOSTTYPE = x86_64
-# environment
-LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
 # automatic
 +F = $(notdir $+)
 # environment
-WSL_INTEROP = /run/WSL/1021_interop
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+USERDOMAIN = ITSYORK
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
-LOGNAME = peter
-# environment
-VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/pg850/.vscode/extensions/ms-vscode-remote.remote-wsl-0.88.2
+OS = Windows_NT
 # environment
 VSCEXT_EXHORT_SKOPEO_CONFIG_PATH = 
 # environment
@@ -178,39 +207,49 @@ VSCEXT_MATCH_MANIFEST_VERSIONS = true
 # makefile
 .DEFAULT_GOAL := all
 # environment
+NVM_HOME = C:\Users\pg850\AppData\Roaming\nvm
+# environment
 VSCEXT_VULNERABILITY_ALERT_SEVERITY = Error
-# environment
-DISPLAY = :0
-# environment
-USER = peter
 # default
 MAKE_VERSION := 4.4.1
 # environment
 VSCEXT_UTM_SOURCE = vscode
 # environment
-HOMEBREW_CELLAR = /home/linuxbrew/.linuxbrew/Cellar
+PROGRAMFILES(X86) = C:\Program Files (x86)
 # environment
-_ = /mnt/c/Users/pg850/AppData/Local/Programs/Microsoft VS Code/bin/code
+UATDATA = C:\Windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
 # environment
-XDG_RUNTIME_DIR = /run/user/1000/
+USERDOMAIN_ROAMINGPROFILE = ITSYORK
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/1000/vscode-ipc-c7db5ca9-e46e-41d4-ac01-af2e7fe306de.sock
+NUMBER_OF_PROCESSORS = 8
+# environment
+PUBLIC = C:\Users\Public
+# environment
+APPDATA = C:\Users\pg850\AppData\Roaming
+# environment
+HOMEDRIVE = C:
+# environment
+NVM_SYMLINK = C:\Program Files\nodejs
+# environment
+PROCESSOR_ARCHITECTURE = x86
 # environment
 VSCEXT_EXHORT_PYTHON3_PATH = python3
 # environment
-NVM_CD_FLAGS = 
+VSCODE_DOTNET_INSTALL_TOOL_ORIGINAL_HOME = undefined
 # environment
 VSCEXT_ENABLE_PYTHON_BEST_EFFORTS_INSTALLATION = false
 # environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+AWS_SDK_LOAD_CONFIG = 
 # makefile (from 'Makefile', line 2)
 BUILD_DIR = bin
 # environment
-HOME = /home/peter
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-TERM = xterm-256color
+TEMP = C:\Users\pg850\AppData\Local\Temp
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\bde26f95-1.95.3-main-sock
 # environment
 VSCEXT_USE_GO_MVS = false
 # default
@@ -220,11 +259,25 @@ VSCEXT_USE_GO_MVS = false
 # default
 SUFFIXES := 
 # environment
-WSL_DISTRO_NAME = Ubuntu-22.04
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+SESSIONNAME = Console
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs notintermediate shell-export archives jobserver jobserver-fifo output-sync check-symlink load
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs notintermediate shell-export archives jobserver output-sync load dospaths
+# environment
+PROCESSOR_REVISION = 8c01
+# environment
+VSCODE_ESM_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+__TELEMETRY_CLIENT_ID = 454a9296-62ee-4a94-8cfb-ce77bf191274
+# environment
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
 # variable set hash-table stats:
-# Load=105/1024=10%, Rehash=0, Collisions=12/140=9%
+# Load=133/1024=13%, Rehash=0, Collisions=11/165=7%
 
 # Pattern-specific Variable Values
 
@@ -232,9 +285,9 @@ WSL_DISTRO_NAME = Ubuntu-22.04
 
 # Directories
 
-# . (device 2080, inode 538): 18 files, no impossibilities.
+# . (key c:/Users/pg850/Work/osMUD-UI, mtime 1732620895): 17 files, no impossibilities.
 
-# 18 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -246,7 +299,7 @@ WSL_DISTRO_NAME = Ubuntu-22.04
 Makefile:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2024-09-05 11:58:55.16760906
+#  Last modified 2024-11-26 11:34:36
 #  File has been updated.
 #  Successfully updated.
 
@@ -275,11 +328,10 @@ all: dhcp_mock.build api.build
 
 api.build:
 #  Implicit rule search has not been done.
- 
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 10):
-	go build -o ${BUILD_DIR}/api ./api
+	CGO_ENABLED=0 CC=arm-linux-gnueabi-gcc GOOS=linux GOARCH=arm GOARM=7 go build -o ${BUILD_DIR}/api ./api
 
 dhcp_mock.build:
 #  Implicit rule search has not been done.
@@ -322,12 +374,12 @@ dhcp_mock.build:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 27 / storage = 272 B / avg = 10 B
-# current buf: size = 8162 B / used = 272 B / count = 27 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 23 / storage = 183 B / avg = 7 B
+# current buf: size = 8174 B / used = 183 B / count = 23 / avg = 7 B
 
-# strcache performance: lookups = 38 / hit rate = 28%
+# strcache performance: lookups = 35 / hit rate = 34%
 # hash-table stats:
-# Load=27/8192=0%, Rehash=0, Collisions=0/38=0%
-# Finished Make data base on Fri Sep  6 11:10:39 2024
+# Load=23/8192=0%, Rehash=0, Collisions=0/35=0%
+# Finished Make data base on Tue Nov 26 11:47:53 2024
 
  
