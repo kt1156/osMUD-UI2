@@ -9,35 +9,48 @@ A Raspberry Pi 3b running OpenWRT is used for this project. Below is instruction
 ## SSH/SCP
 To SSH into the RPi use the command
 
-`ssh root@192.168.1.1`
+```bash
+$ ssh root@192.168.1.1
+```
 
 whilst connected to the RPi using ethernet
 
 To SCP a file to the RPi you need to use legacy options
+```bash
+$ scp -O [file] root@192.168.1.1:/file/destination
+```
 
-`scp -O [file] root@192.168.1.1:/file/destination`
 
 ## osMUD on the RPi
-The osmud service is set to autostart on the OpenWRT, however if need to restart it you can use
+The osmud service is set to autostart on the RPi, however if need to restart it you can use
 
-`service osmud restart`
+```bash
+$ service osmud restart
+```
 
 alternatively the help menu for the osmud service can be brought up with 
 
-`service osmud`
+```bash
+$ service osmud
+```
 
 ## Launching the API on the RPi
 Before launching the API the database `store.db` must be moved to the location that osmud expects it to be in. This can be done with the command
 
-`cp /etc/osmud/store.db /var/lib/osmud/store.db`
+```bash
+$ cp /etc/osmud/store.db /var/lib/osmud/store.db
+```
 
 The API is an executable script stored in
 
-`~/usr/bin/api`
-
+```bash
+$ ~/usr/bin/api
+```
 And can be launched with 
 
-`./usr/bin/api`
+```bash
+$ ./usr/bin/api
+```
 
 from the root directory. This starts a server running at `192.168.1.1:8080`
 
@@ -45,9 +58,19 @@ from the root directory. This starts a server running at `192.168.1.1:8080`
 
 The UI is launched on your machine. Use `cd ui` to navigate to the folder.
 
-Run the command `npm install` to install all dependancies for the UI
+Run the command 
 
-Then use `npm run dev` to start the UI. This will run at `localhost:3000` in your browser.
+```bash 
+$ npm install
+```
+
+ to install all dependancies for the UI
+
+Then use 
+```bash
+$ npm run dev
+```
+ to start the UI. This will run at `localhost:3000` in your browser.
 
 # Tools
 
@@ -55,14 +78,18 @@ Then use `npm run dev` to start the UI. This will run at `localhost:3000` in you
 Python script for generating arbitrary length MUD files for testing. Specify number of rules to generate. Found in root folder
 
 ## Batch Create MUD DB Entry
-Run `./batch_create_mud_db_entry.sh` in /scripts/osmud/ with a number of devices to add to add that number of devices to the database. All devices have name test_device_n and a sequential MAC address.
+Run 
+```bash
+$ ./batch_create_mud_db_entry.sh
+```
+in /scripts/osmud/ with a number of devices to add to add that number of devices to the database. All devices have name test_device_n and a sequential MAC address.
 
 # Building
 
 ## Building the API for the RPi
 The go binary has to built using specific arguments for the Raspberry Pi, defined in the Makefile:
 
-```
+```bash
   CGO_Enabled = 0 # OpenWRT does not include the C Standard Library
   CC=arm-linux-gnueabi-gcc # Toolchain for this hardware and version of OpenWRT
   GOOS=linux 
