@@ -6,12 +6,10 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Nov 26 11:55:02 2024
+# Make data base, printed on Tue Nov 26 12:19:44 2024
 
 # Variables
 
-# environment
-FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
 SYSTEMDRIVE = C:
 # environment
@@ -22,6 +20,8 @@ VSCEXT_EXHORT_SKOPEO_PATH = skopeo
 USERPROFILE = C:\Users\pg850
 # environment
 LOCALAPPDATA = C:\Users\pg850\AppData\Local
+# environment
+WSLENV = VSCODE_CLI_REMOTE_ENV/w:ELECTRON_RUN_AS_NODE/w:
 # environment
 VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
 # environment
@@ -53,11 +53,9 @@ GOPATH = C:\Users\pg850\go
 # environment
 VSCEXT_EXHORT_SYFT_CONFIG_PATH = 
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_8032_EWYNXIGASJKFUKDH
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_10480_JDHJCVUXFKARILOT
 # environment
 VSCEXT_EXHORT_PIP_PATH = pip
-# environment
-FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -94,8 +92,6 @@ CURDIR := c:/Users/pg850/Work/osMUD-UI
 VSCEXT_EXHORT_GO_PATH = go
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
-# environment
-VSCODE_L10N_BUNDLE_LOCATION = 
 # automatic
 *D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
@@ -117,7 +113,7 @@ VSCEXT_EXHORT_PODMAN_PATH = podman
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 8032
+VSCODE_PID = 10480
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # environment
@@ -128,6 +124,8 @@ VSCEXT_EXHORT_PIP3_PATH = pip3
 *F = $(notdir $*)
 # environment
 VSCEXT_EXHORT_SYFT_PATH = syft
+# environment
+VSCODE_CLI_REMOTE_ENV = /tmp/vscode-distro-env.BN4X7l
 # automatic
 <D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
 # environment
@@ -153,7 +151,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\MiKTeX\miktex\bin\x64\;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Scripts;C:\Users\pg850\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\MATLAB\R2024a\runtime\win64;C:\Program Files\MATLAB\R2024a\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Go\bin;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7\;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Ruby31-x64\bin;C:\Ruby32-x64\bin;C:\Users\pg850\AppData\Local\Microsoft\WindowsApps;C:\Users\pg850\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\pg850\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\pg850\AppData\Roaming\npm;C:\Users\pg850\go\bin;C:\Users\pg850\.dotnet\tools
+PATH = C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\MiKTeX\miktex\bin\x64\;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Scripts;C:\Users\pg850\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\MATLAB\R2024a\runtime\win64;C:\Program Files\MATLAB\R2024a\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Go\bin;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7\;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Ruby31-x64\bin;C:\Ruby32-x64\bin;C:\Users\pg850\AppData\Local\Microsoft\WindowsApps;C:\Users\pg850\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\pg850\AppData\Roaming\nvm;C:\Users\pg850\AppData\Roaming\npm;C:\Users\pg850\go\bin;C:\Users\pg850\.dotnet\tools
 # environment
 COMPUTERNAME = UOY22Y177
 # default
@@ -252,14 +250,14 @@ VSCEXT_USE_GO_MVS = false
 .RECIPEPREFIX := 
 # automatic
 <F = $(notdir $<)
-# environment
-EFC_9792 = 1
 # default
 SUFFIXES := 
 # environment
 ALLUSERSPROFILE = C:\ProgramData
 # environment
-SESSIONNAME = Console
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs notintermediate shell-export archives jobserver output-sync load dospaths
 # environment
@@ -271,7 +269,7 @@ __TELEMETRY_CLIENT_ID = 454a9296-62ee-4a94-8cfb-ce77bf191274
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
 # variable set hash-table stats:
-# Load=130/1024=13%, Rehash=0, Collisions=12/162=7%
+# Load=129/1024=13%, Rehash=0, Collisions=10/161=6%
 
 # Pattern-specific Variable Values
 
@@ -293,7 +291,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
 Makefile:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2024-11-26 11:54:59
+#  Last modified 2024-11-26 11:55:09
 #  File has been updated.
 #  Successfully updated.
 
@@ -376,6 +374,6 @@ dhcp_mock.build:
 # strcache performance: lookups = 35 / hit rate = 34%
 # hash-table stats:
 # Load=23/8192=0%, Rehash=0, Collisions=0/35=0%
-# Finished Make data base on Tue Nov 26 11:55:02 2024
+# Finished Make data base on Tue Nov 26 12:19:44 2024
 
  
