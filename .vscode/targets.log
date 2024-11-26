@@ -6,10 +6,12 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Nov 26 11:47:53 2024
+# Make data base, printed on Tue Nov 26 11:55:02 2024
 
 # Variables
 
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
 SYSTEMDRIVE = C:
 # environment
@@ -21,11 +23,9 @@ USERPROFILE = C:\Users\pg850
 # environment
 LOCALAPPDATA = C:\Users\pg850\AppData\Local
 # environment
-WSLENV = WT_SESSION:WT_PROFILE_ID:
-# environment
 VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
 # environment
-VSCODE_CWD = C:\Users\pg850\Work\osMUD-UI
+VSCODE_CWD = C:\Users\pg850\AppData\Local\Programs\Microsoft VS Code
 # environment
 VSCEXT_EXHORT_IMAGE_PLATFORM = 
 # environment
@@ -35,7 +35,7 @@ SYSTEMROOT = C:\Windows
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-PSMODULEPATH = C:\Users\pg850\OneDrive - University of York\Documents\PowerShell\Modules;C:\Program Files\PowerShell\Modules;c:\program files\powershell\7\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
 # environment
 VSCEXT_EXHORT_GRADLE_PATH = gradle
 # environment
@@ -53,9 +53,11 @@ GOPATH = C:\Users\pg850\go
 # environment
 VSCEXT_EXHORT_SYFT_CONFIG_PATH = 
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_6376_MHQDUPPVJNTFAFNR
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_8032_EWYNXIGASJKFUKDH
 # environment
 VSCEXT_EXHORT_PIP_PATH = pip
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -115,15 +117,13 @@ VSCEXT_EXHORT_PODMAN_PATH = podman
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 6376
+VSCODE_PID = 8032
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # environment
 __PSLOCKDOWNPOLICY = 0
 # environment
 VSCEXT_EXHORT_PIP3_PATH = pip3
-# environment
-WT_PROFILE_ID = {574e775e-4f2a-5b96-ac1e-a2962a402336}
 # automatic
 *F = $(notdir $*)
 # environment
@@ -153,7 +153,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Program Files\PowerShell\7;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\MiKTeX\miktex\bin\x64\;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Scripts;%NVM_HOME%;%NVM_SYMLINK%;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\MATLAB\R2024a\runtime\win64;C:\Program Files\MATLAB\R2024a\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Go\bin;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7\;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Ruby31-x64\bin;C:\Ruby32-x64\bin;C:\Users\pg850\AppData\Local\Microsoft\WindowsApps;C:\Users\pg850\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\pg850\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\pg850\AppData\Roaming\npm;C:\Users\pg850\go\bin;C:\Users\pg850\.dotnet\tools
+PATH = C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\MiKTeX\miktex\bin\x64\;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Scripts;C:\Users\pg850\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\MATLAB\R2024a\runtime\win64;C:\Program Files\MATLAB\R2024a\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Go\bin;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7\;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;C:\Ruby31-x64\bin;C:\Ruby32-x64\bin;C:\Users\pg850\AppData\Local\Microsoft\WindowsApps;C:\Users\pg850\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\pg850\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\pg850\AppData\Roaming\npm;C:\Users\pg850\go\bin;C:\Users\pg850\.dotnet\tools
 # environment
 COMPUTERNAME = UOY22Y177
 # default
@@ -166,8 +166,6 @@ PROMPT = $P$G
 CHOCOLATEYLASTPATHUPDATE = 133673283549488681
 # environment
 VSCEXT_USE_PIP_DEP_TREE = false
-# environment
-WT_SESSION = 731637cb-c5d2-4530-b25f-3d06d09e1d07
 # environment
 LOGONSERVER = \\UOY22Y177
 # environment
@@ -185,7 +183,7 @@ VSCEXT_STACK_ANALYSIS_COMMAND = rhda.stackAnalysis
 # environment
 PROGRAMW6432 = C:\Program Files
 # environment
-PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW;.CPL
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW
 # environment
 VSCEXT_EXHORT_NPM_PATH = npm
 # automatic
@@ -238,8 +236,6 @@ VSCEXT_EXHORT_PYTHON3_PATH = python3
 VSCODE_DOTNET_INSTALL_TOOL_ORIGINAL_HOME = undefined
 # environment
 VSCEXT_ENABLE_PYTHON_BEST_EFFORTS_INSTALLATION = false
-# environment
-AWS_SDK_LOAD_CONFIG = 
 # makefile (from 'Makefile', line 2)
 BUILD_DIR = bin
 # environment
@@ -256,16 +252,14 @@ VSCEXT_USE_GO_MVS = false
 .RECIPEPREFIX := 
 # automatic
 <F = $(notdir $<)
+# environment
+EFC_9792 = 1
 # default
 SUFFIXES := 
 # environment
 ALLUSERSPROFILE = C:\ProgramData
 # environment
 SESSIONNAME = Console
-# environment
-VSCODE_CLI = 1
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs notintermediate shell-export archives jobserver output-sync load dospaths
 # environment
@@ -277,7 +271,7 @@ __TELEMETRY_CLIENT_ID = 454a9296-62ee-4a94-8cfb-ce77bf191274
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
 # variable set hash-table stats:
-# Load=133/1024=13%, Rehash=0, Collisions=11/165=7%
+# Load=130/1024=13%, Rehash=0, Collisions=12/162=7%
 
 # Pattern-specific Variable Values
 
@@ -285,7 +279,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/pg850/Work/osMUD-UI, mtime 1732620895): 17 files, no impossibilities.
+# . (key c:/Users/pg850/Work/osMUD-UI, mtime 1732621884): 17 files, no impossibilities.
 
 # 17 files, no impossibilities in 1 directories.
 
@@ -299,7 +293,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
 Makefile:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2024-11-26 11:34:36
+#  Last modified 2024-11-26 11:54:59
 #  File has been updated.
 #  Successfully updated.
 
@@ -307,7 +301,7 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 13):
+#  recipe to execute (from 'Makefile', line 15):
 	mkdir -p ${BUILD_DIR}
 	rm -r ${BUILD_DIR}
 
@@ -331,7 +325,9 @@ api.build:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 10):
-	CGO_ENABLED=0 CC=arm-linux-gnueabi-gcc GOOS=linux GOARCH=arm GOARM=7 go build -o ${BUILD_DIR}/api ./api
+	env CC=arm-linux-gnueabi-gcc CGO_ENABLED=1 GOOS=linux GOARCH=arm GOARM=7  \
+                go build -o ${BUILD_DIR}/api -ldflags "-linkmode 'external' -extldflags '-static'"\
+                -tags sqlite_omit_load_extension ./api
 
 dhcp_mock.build:
 #  Implicit rule search has not been done.
@@ -380,6 +376,6 @@ dhcp_mock.build:
 # strcache performance: lookups = 35 / hit rate = 34%
 # hash-table stats:
 # Load=23/8192=0%, Rehash=0, Collisions=0/35=0%
-# Finished Make data base on Tue Nov 26 11:47:53 2024
+# Finished Make data base on Tue Nov 26 11:55:02 2024
 
  
