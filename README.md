@@ -54,6 +54,10 @@ To SCP a file to the RPi you need to use legacy options
 `scp -O [file] root@192.168.1.1:/file/destination`
 
 ## Launching the API on the RPi
+Before launching the API the database `store.db` must be moved to the location that osmud expects it to be in. This can be done with the command
+
+`cp /etc/osmud/store.db /var/lib/osmud/store.db`
+
 The API is an executable script stored in
 
 `~/usr/bin/api`
