@@ -35,10 +35,17 @@ $ service osmud
 ```
 
 ## Launching the API on the RPi
-Before launching the API the database `store.db` must be moved to the location that osmud expects it to be in. This can be done with the command
+Before launching the API the database `store.db` must be moved to the location that osmud expects it to be in. This can be done with the commands
 
 ```bash
+$ mkdir /var/lib/osmud
 $ cp /etc/osmud/store.db /var/lib/osmud/store.db
+```
+
+osmud also expects a file for the dhcp events log to exist. This can be created with
+
+```bash
+$ touch /var/log/osmud-dhcp-events.log
 ```
 
 The API is an executable script stored in

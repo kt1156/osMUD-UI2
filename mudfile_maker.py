@@ -92,5 +92,4 @@ def generate_mud_file(n, output_filename="mud_file.json"):
 
     print(f"MUD file with {n} rules has been generated and saved to {output_filename}")
 
-# Example usage: Generate a MUD file with 5 rules
-generate_mud_file(40)
+generate_mud_file(50)
