@@ -1,3 +1,4 @@
+import { MudFile } from "@/types/Mud";
 import NetworkService from "./NetworkService";
 
 export type OsMudEntry = {
@@ -20,6 +21,16 @@ class DeviceService {
     return NetworkService.get(
       `/api/osmud/${encodeURIComponent(macAddress)}/mud`
     );
+  }
+  
+  async UpdateDeviceMudFile(updatedMud: MudFile) {
+    return fetch("/api/update-mud", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedMud),
+    });
   }
 }
 
