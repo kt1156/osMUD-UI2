@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 export default function Pcappage() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState("visualiser");
+  const [trafficGraph, setTrafficGraph] = useState<string | null>(null);
 
   useEffect(() => {
     if (activeTab === "devices") {
@@ -17,10 +18,25 @@ export default function Pcappage() {
   const [pcap1, setPcap1] = useState<File | null>(null);
   const [pcap2, setPcap2] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
-  const [graphs, setGraphs] = useState<{ transportGraph1: string; appGraph1: string; mixedGraph1: string; transportGraph2: string; appGraph2: string; mixedGraph2: string } | null>(null);
+  const [graphs, setGraphs] = useState<{
+    transportGraph1: string;
+    appGraph1: string;
+    mixedGraph1: string;
+    transportGraph2: string;
+    appGraph2: string;
+    mixedGraph2: string;
+    latencyGraph1: string;
+    latencyGraph2: string;
+    bandwidthGraph1: string;
+    bandwidthGraph2: string;
+  } | null>(null);
+  
   const [selectedGraph, setSelectedGraph] = useState<string | null>(null);
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>, fileSetter: (file: File) => void) => {
+  const handleFileChange = (
+    event: React.ChangeEvent<HTMLInputElement>,
+    fileSetter: (file: File) => void
+  ) => {
     if (event.target.files?.[0]) {
       fileSetter(event.target.files[0]);
     }
@@ -71,17 +87,31 @@ export default function Pcappage() {
         <h1 className="text-2xl font-semibold mb-4">Upload Two PCAP Files</h1>
 
         {/* File Upload Inputs */}
-        <label className="block front-medium">
-        Before MUD: 
-          <input type="file" accept=".pcap" onChange={(e) => handleFileChange(e, setPcap1)} className="mb-4 p-2"/>
+        <label className="block font-medium">
+          Before MUD:
+          <input
+            type="file"
+            accept=".pcap"
+            onChange={(e) => handleFileChange(e, setPcap1)}
+            className="mb-4 p-2"
+          />
         </label>
-        <label className="block front-medium">
-        After MUD: 
-          <input type="file" accept=".pcap" onChange={(e) => handleFileChange(e, setPcap2)} className="mb-4 p-2" />
+
+        <label className="block font-medium">
+          After MUD:
+          <input
+            type="file"
+            accept=".pcap"
+            onChange={(e) => handleFileChange(e, setPcap2)}
+            className="mb-4 p-2"
+          />
         </label>
 
         {/* Upload Button */}
-        <button onClick={handleUpload} className="bg-blue-500 text-white px-4 py-2 rounded">
+        <button
+          onClick={handleUpload}
+          className="bg-blue-500 text-white px-4 py-2 rounded"
+        >
           {loading ? "Processing..." : "Upload & Process"}
         </button>
 
@@ -90,65 +120,125 @@ export default function Pcappage() {
           <div className="mt-6">
             <h2 className="text-xl font-semibold">Generated Graphs</h2>
 
+            {/* Graph Selection Buttons */}
             <div className="flex justify-center space-x-4 mb-4">
-            <button onClick={() => handleGraphSelection("application")} className="px-4 py-2 bg-gray-200 rounded">Application Layers</button>
-            <button onClick={() => handleGraphSelection("transport")} className="px-4 py-2 bg-gray-200 rounded">Transport Layers</button>
-            <button onClick={() => handleGraphSelection("combined")} className="px-4 py-2 bg-gray-200 rounded">Combined Layers</button>
-          </div>
+              <button
+                onClick={() => handleGraphSelection("application")}
+                className="px-4 py-2 bg-gray-200 rounded"
+              >
+                Application Layers
+              </button>
+              <button
+                onClick={() => handleGraphSelection("transport")}
+                className="px-4 py-2 bg-gray-200 rounded"
+              >
+                Transport Layers
+              </button>
+              <button
+                onClick={() => handleGraphSelection("combined")}
+                className="px-4 py-2 bg-gray-200 rounded"
+              >
+                Combined Layers
+              </button>
+              <button
+                onClick={() => handleGraphSelection("bandwidth")}
+                className="px-4 py-2 bg-gray-200 rounded"
+              >
+                Bandwidth
+              </button>
+              <button
+                onClick={() => handleGraphSelection("latency")}
+                className="px-4 py-2 bg-gray-200 rounded"
+              >
+                Latency
+              </button>
+            </div>
 
-
-          {selectedGraph && graphs && (
-          <div className="flex justify-center">
-            {selectedGraph === "application" && (
-              <div className="flex space-x-4">
-                <img
-                src={`data:image/png;base64,${graphs.appGraph1}`}
-                alt="Application Graph 1"
-                className="border rounded-lg shadow-md"
-                style={{ width: '600px', height: '400px' }} 
-                />
-                <img
-                src={`data:image/png;base64,${graphs.appGraph2}`}
-                alt="Application Graph 2"
-                className="border rounded-lg shadow-md"
-                style={{ width: '600px', height: '400px' }} 
-                />
+            {/* Display Selected Graphs */}
+            {selectedGraph && graphs && (
+              <div className="flex justify-center">
+                {selectedGraph === "application" && (
+                  <div className="flex space-x-4">
+                    <img
+                      src={`data:image/png;base64,${graphs.appGraph1}`}
+                      alt="Application Graph 1"
+                      className="border rounded-lg shadow-md"
+                      style={{ width: "600px", height: "400px" }}
+                    />
+                    <img
+                      src={`data:image/png;base64,${graphs.appGraph2}`}
+                      alt="Application Graph 2"
+                      className="border rounded-lg shadow-md"
+                      style={{ width: "600px", height: "400px" }}
+                    />
+                  </div>
+                )}
+                {selectedGraph === "transport" && (
+                  <div className="flex space-x-4">
+                    <img
+                      src={`data:image/png;base64,${graphs.transportGraph1}`}
+                      alt="Transport Graph 1"
+                      className="border rounded-lg shadow-md"
+                      style={{ width: "600px", height: "400px" }}
+                    />
+                    <img
+                      src={`data:image/png;base64,${graphs.transportGraph2}`}
+                      alt="Transport Graph 2"
+                      className="border rounded-lg shadow-md"
+                      style={{ width: "600px", height: "400px" }}
+                    />
+                  </div>
+                )}
+                {selectedGraph === "combined" && (
+                  <div className="flex space-x-4">
+                    <img
+                      src={`data:image/png;base64,${graphs.mixedGraph1}`}
+                      alt="Combined Graph 1"
+                      className="border rounded-lg shadow-md"
+                      style={{ width: "600px", height: "400px" }}
+                    />
+                    <img
+                      src={`data:image/png;base64,${graphs.mixedGraph2}`}
+                      alt="Combined Graph 2"
+                      className="border rounded-lg shadow-md"
+                      style={{ width: "600px", height: "400px" }}
+                    />
+                  </div>
+                )}
+                  {selectedGraph === "bandwidth" && (
+                  <div className="flex space-x-4">
+                    <img
+                      src={`data:image/png;base64,${graphs.bandwidthGraph1}`}
+                      alt="Bandwidth Graph 1"
+                      className="border rounded-lg shadow-md"
+                      style={{ width: "600px", height: "400px" }}
+                    />
+                    <img
+                      src={`data:image/png;base64,${graphs.bandwidthGraph2}`}
+                      alt="Bandwidth Graph 2"
+                      className="border rounded-lg shadow-md"
+                      style={{ width: "600px", height: "400px" }}
+                    />
+                  </div>
+                )}
+                {selectedGraph === "latency" && (
+                  <div className="flex space-x-4">
+                    <img
+                      src={`data:image/png;base64,${graphs.latencyGraph1}`}
+                      alt="Latency Graph 1"
+                      className="border rounded-lg shadow-md"
+                      style={{ width: "600px", height: "400px" }}
+                    />
+                    <img
+                      src={`data:image/png;base64,${graphs.latencyGraph2}`}
+                      alt="Latency Graph 2"
+                      className="border rounded-lg shadow-md"
+                      style={{ width: "600px", height: "400px" }}
+                    />
+                  </div>
+                )}
               </div>
             )}
-            {selectedGraph === "transport" && (
-              <div className="flex space-x-4">
-                <img
-                src={`data:image/png;base64,${graphs.transportGraph1}`}
-                alt="Transport Graph 1"
-                className="border rounded-lg shadow-md"
-                style={{ width: '600px', height: '400px' }} 
-                />
-                <img
-                src={`data:image/png;base64,${graphs.transportGraph2}`}
-                alt="Transport Graph 2"
-                className="border rounded-lg shadow-md"
-                style={{ width: '600px', height: '400px' }} 
-                />
-              </div>
-            )}
-            {selectedGraph === "combined" && (
-              <div className="flex space-x-4">
-                <img
-                src={`data:image/png;base64,${graphs.mixedGraph1}`}
-                alt="Combined Graph 1"
-                className="border rounded-lg shadow-md"
-                style={{ width: '600px', height: '400px' }} 
-                />
-                <img
-                src={`data:image/png;base64,${graphs.mixedGraph2}`}
-                alt="Combined Graph 2"
-                className="border rounded-lg shadow-md"
-                style={{ width: '600px', height: '400px' }} 
-                />
-              </div>
-            )}
-          </div>
-        )}
           </div>
         )}
       </div>
