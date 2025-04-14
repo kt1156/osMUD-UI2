@@ -29,7 +29,7 @@ export default function Pcappage() {
     bandwidthGraph1: string;
     bandwidthGraph2: string;
   } | null>(null);
-  
+
   const [selectedGraph, setSelectedGraph] = useState<string | null>(null);
 
   const handleFileChange = (
@@ -153,6 +153,62 @@ export default function Pcappage() {
               </button>
             </div>
 
+            {/* Descriptions Before Graphs */}
+            {selectedGraph && graphs && (
+              <div className="flex justify-center mb-4">
+                {selectedGraph === "application" && (
+                  <div className="w-full px-4 text-center">
+                    <p>
+                      Application Layer: This shows the types of services or applications your device is using (e.g., web browsing, streaming, or DNS request). 
+                      <br />This lets you see which services are using the most traffic - helping you notice if there is unexpected activity.
+                      <br />
+                      Before MUD vs After MUD generated graphs:
+                    </p>
+                  </div>
+                )}
+                {selectedGraph === "transport" && (
+                  <div className="w-full px-4 text-center">
+                    <p>
+                      Transport Layer: This shows how your device's data is being sent (e.g., TCP, UDP, etc.). 
+                      <br />It gives insight into whether the traffic is stable, secure, and if the device is behaving as expected.
+                      <br />
+                      Before MUD vs After MUD generated graphs:
+                    </p>
+                  </div>
+                )}
+                {selectedGraph === "combined" && (
+                  <div className="w-full px-4 text-center">
+                    <p>
+                      Combined Layers: This graph combines both the application and transport layers to give a comprehensive view of the network traffic before and after MUD enforcement. 
+                      <br />This can help you identify overall trends in network behaviour.
+                      <br />
+                      Before MUD vs After MUD generated graphs:
+                    </p>
+                  </div>
+                )}
+                {selectedGraph === "bandwidth" && (
+                  <div className="w-full px-4 text-center">
+                    <p>
+                      Bandwidth: More data can travel after MUD is enforced. 
+                      <br/>This graph shows the impact of MUD enforcement on available bandwidth, helping you see if the restrictions have led to an increase in the throughput.
+                      <br />
+                      Before MUD vs After MUD generated graphs:
+                    </p>
+                  </div>
+                )}
+                {selectedGraph === "latency" && (
+                  <div className="w-full px-4 text-center">
+                    <p>
+                      Latency: The time taken for data to travel. 
+                      <br/>This graph highlights the latency differences before and after MUD enforcement, helping you understand the impact of MUD on communication delay.
+                      <br />
+                      Before MUD vs After MUD generated graphs:
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
+
             {/* Display Selected Graphs */}
             {selectedGraph && graphs && (
               <div className="flex justify-center">
@@ -204,7 +260,7 @@ export default function Pcappage() {
                     />
                   </div>
                 )}
-                  {selectedGraph === "bandwidth" && (
+                {selectedGraph === "bandwidth" && (
                   <div className="flex space-x-4">
                     <img
                       src={`data:image/png;base64,${graphs.bandwidthGraph1}`}
