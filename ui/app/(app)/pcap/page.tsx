@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 export default function Pcappage() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState("visualiser");
-  const [trafficGraph, setTrafficGraph] = useState<string | null>(null);
 
   useEffect(() => {
     if (activeTab === "devices") {
